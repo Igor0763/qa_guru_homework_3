@@ -10,7 +10,6 @@ public class PracticeFormTest {
     static void BeforeAll() {
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.holdBrowserOpen = false;
         Configuration.baseUrl = "https://demoqa.com";
 
     }
