@@ -2,10 +2,12 @@ package tests;
 
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
+import pages.components.ResultComponent;
 
 public class PracticeFormTest extends TestBases {
 
     RegistrationPage registrationPage = new RegistrationPage();
+    ResultComponent resultComponent = new ResultComponent();
 
     @Test
     void fillFormTest() {
@@ -24,13 +26,13 @@ public class PracticeFormTest extends TestBases {
                 .setCity("Karnal")
                 .submit();
 
-        registrationPage.checkResult("Student Name", "Nikita Malinin")
+        resultComponent.checkResult("Student Name", "Nikita Malinin")
                 .checkResult("Student Email", "Malinin@true.re")
                 .checkResult("Gender", "Other")
                 .checkResult("Mobile", "1234567891")
                 .checkResult("Date of Birth", "05 May,1920")
                 .checkResult("Subjects", "English")
-                .checkResult("Hobbies", "Sports, Reading, Music")
+                .checkResult("Hobbies", "Sports, Readng, Music")
                 .checkResult("Picture", "panda.jpg")
                 .checkResult("Address", "city:Big, street:long")
                 .checkResult("State and City", "Haryana Karnal");
@@ -47,7 +49,7 @@ public class PracticeFormTest extends TestBases {
                 .setPhone("1234567891")
                 .submit();
 
-        registrationPage.checkResult("Student Name", "Nikita Malinin")
+        resultComponent.checkResult("Student Name", "Nikita Malinin")
                 .checkResult("Gender", "Other")
                 .checkResult("Mobile", "1234567891");
     }
@@ -60,7 +62,7 @@ public class PracticeFormTest extends TestBases {
                 .setPhone("1234567891")
                 .submit();
 
-        registrationPage.negativeResult()
+        resultComponent.negativeResult()
                 .negativeResult();
     }
 
