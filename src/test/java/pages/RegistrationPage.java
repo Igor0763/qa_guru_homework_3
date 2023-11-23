@@ -3,7 +3,6 @@ package pages;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import pages.components.CalendarComponent;
-import pages.components.HobbiesComponent;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -25,7 +24,7 @@ public class RegistrationPage {
             citySelect = $("#react-select-4-input"),
             submitButton = $("#submit");
     CalendarComponent calendarComponent = new CalendarComponent();
-    HobbiesComponent hobbiesComponent = new HobbiesComponent();
+
 
     public RegistrationPage openPage() {
         open("/automation-practice-form");
@@ -71,9 +70,8 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage setHobbies(String value1, String value2, String value3) {
-        hobbiesComponent.setHobbies(value1, value2, value3);
-        hobbiesCheckbox.click();
+    public RegistrationPage setHobbies(String value) {
+        hobbiesCheckbox.$(byText(value)).click();;
         return this;
     }
 
