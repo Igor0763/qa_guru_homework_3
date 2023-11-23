@@ -70,8 +70,10 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage setHobbies(String value) {
-        hobbiesCheckbox.$(byText(value)).click();;
+    public RegistrationPage setHobbies(String value1, String value2, String value3) {
+        hobbiesCheckbox.$(byText(value1)).click();
+        hobbiesCheckbox.$(byText(value2)).click();
+        hobbiesCheckbox.$(byText(value3)).click();
         return this;
     }
 
