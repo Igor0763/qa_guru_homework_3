@@ -19,7 +19,7 @@ public class PracticeFormTest extends TestBases {
                 .setPhone("1234567891")
                 .setOfBirthInput("05", "May", "1920")
                 .setSubjects("English")
-                .setHobbies("Sports", "Reading", "Music")
+                .setHobbies("Sports")
                 .setFile("panda.jpg")
                 .setCurrentAddress("city:Big, street:long")
                 .setState("Haryana")
@@ -41,7 +41,7 @@ public class PracticeFormTest extends TestBases {
     }
 
     @Test
-    void requiredFieldsTest(){
+    void requiredFieldsTest() {
         registrationPage.openPage()
                 .setFirstName("Nikita")
                 .setLastName("Malinin")
@@ -55,7 +55,7 @@ public class PracticeFormTest extends TestBases {
     }
 
     @Test
-    void negativeTest(){
+    void negativeTest() {
         registrationPage.openPage()
                 .setFirstName("Nikita")
                 .setLastName("Malinin")
