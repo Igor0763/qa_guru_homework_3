@@ -1,11 +1,10 @@
-package pages;
+package tests;
 
 import org.junit.jupiter.api.Test;
+import pages.RegistrationPage;
 import pages.components.ResultComponent;
-import tests.TestBases;
-import tests.TestData;
 
-public class TestFaker extends TestBases {
+public class FakerTest extends TestBases {
 
     TestData data = new TestData();
     RegistrationPage registrationPage = new RegistrationPage();

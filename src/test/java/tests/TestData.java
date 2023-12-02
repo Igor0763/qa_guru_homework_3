@@ -2,6 +2,8 @@ package tests;
 
 import com.github.javafaker.Faker;
 
+import java.util.Date;
+
 public class TestData {
 
     Faker faker = new Faker();
@@ -12,7 +14,7 @@ public class TestData {
             email = faker.internet().emailAddress(),
             gender = faker.options().option("Male", "Female", "Other"),
             phone = faker.phoneNumber().subscriberNumber(10),
-            day = String.valueOf(faker.number().numberBetween(10, 28)),
+            day = String.format("%02d", faker.number().numberBetween(1,28)),
             month = faker.options().option("January", "February", "March", "April",
                     "May", "June", "July", "August", "September", "October", "November", "December"),
             year = String.valueOf(faker.number().numberBetween(1900, 2100)),

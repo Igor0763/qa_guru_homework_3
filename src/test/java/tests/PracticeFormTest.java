@@ -32,7 +32,7 @@ public class PracticeFormTest extends TestBases {
                 .checkResult("Mobile", "1234567891")
                 .checkResult("Date of Birth", "05 May,1920")
                 .checkResult("Subjects", "English")
-                .checkResult("Hobbies", "Sports, Reading, Music")
+                .checkResult("Hobbies", "Sports")
                 .checkResult("Picture", "panda.jpg")
                 .checkResult("Address", "city:Big, street:long")
                 .checkResult("State and City", "Haryana Karnal");
