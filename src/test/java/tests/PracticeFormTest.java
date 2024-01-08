@@ -1,15 +1,28 @@
 package tests;
 
+import helpers.Attach;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 import pages.components.ResultComponent;
 
 public class PracticeFormTest extends TestBases {
 
+    @AfterEach
+    void addAttachments() {
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
+
+    }
+
     RegistrationPage registrationPage = new RegistrationPage();
     ResultComponent resultComponent = new ResultComponent();
 
     @Test
+    @Tag("demoQaTest")
     void fillFormTest() {
         registrationPage.openPage()
                 .setFirstName("Nikita")
