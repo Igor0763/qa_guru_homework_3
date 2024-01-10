@@ -26,7 +26,7 @@ public class PracticeFormTest extends TestBases {
     @Test
     @Tag("demoQaTest")
     void fillFormTest() {
-        step("fill form", () -> {
+        step("Form filling", () -> {
             registrationPage.openPage()
                     .setFirstName("Nikita")
                     .setLastName("Malinin")
@@ -42,7 +42,7 @@ public class PracticeFormTest extends TestBases {
                     .setCity("Karnal")
                     .submit();
         });
-        step("fill form", () -> {
+        step("Verification of the completed form", () -> {
             resultComponent.checkResult("Student Name", "Nikita Malinin")
                     .checkResult("Student Email", "Malinin@true.re")
                     .checkResult("Gender", "Other")
