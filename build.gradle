@@ -46,6 +46,7 @@ tasks.withType(Test) {
 }
 
 task demo_test (type: Test) {
+    clean
     useJUnitPlatform {
         includeTags("demoQaTest")
     }

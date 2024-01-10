@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 import pages.components.ResultComponent;
 
+import static io.qameta.allure.Allure.step;
+
 public class PracticeFormTest extends TestBases {
 
     @AfterEach
@@ -24,32 +26,34 @@ public class PracticeFormTest extends TestBases {
     @Test
     @Tag("demoQaTest")
     void fillFormTest() {
-        registrationPage.openPage()
-                .setFirstName("Nikita")
-                .setLastName("Malinin")
-                .setEmail("Malinin@true.re")
-                .setGender("Other")
-                .setPhone("1234567891")
-                .setOfBirthInput("05", "May", "1920")
-                .setSubjects("English")
-                .setHobbies("Sports")
-                .setFile("panda.jpg")
-                .setCurrentAddress("city:Big, street:long")
-                .setState("Haryana")
-                .setCity("Karnal")
-                .submit();
-
-        resultComponent.checkResult("Student Name", "Nikita Malinin")
-                .checkResult("Student Email", "Malinin@true.re")
-                .checkResult("Gender", "Other")
-                .checkResult("Mobile", "1234567891")
-                .checkResult("Date of Birth", "05 May,1920")
-                .checkResult("Subjects", "English")
-                .checkResult("Hobbies", "Sports")
-                .checkResult("Picture", "panda.jpg")
-                .checkResult("Address", "city:Big, street:long")
-                .checkResult("State and City", "Haryana Karnal");
-
+        step("fill form", () -> {
+            registrationPage.openPage()
+                    .setFirstName("Nikita")
+                    .setLastName("Malinin")
+                    .setEmail("Malinin@true.re")
+                    .setGender("Other")
+                    .setPhone("1234567891")
+                    .setOfBirthInput("05", "May", "1920")
+                    .setSubjects("English")
+                    .setHobbies("Sports")
+                    .setFile("panda.jpg")
+                    .setCurrentAddress("city:Big, street:long")
+                    .setState("Haryana")
+                    .setCity("Karnal")
+                    .submit();
+        });
+        step("fill form", () -> {
+            resultComponent.checkResult("Student Name", "Nikita Malinin")
+                    .checkResult("Student Email", "Malinin@true.re")
+                    .checkResult("Gender", "Other")
+                    .checkResult("Mobile", "1234567891")
+                    .checkResult("Date of Birth", "05 May,1920")
+                    .checkResult("Subjects", "English")
+                    .checkResult("Hobbies", "Sports")
+                    .checkResult("Picture", "panda.jpg")
+                    .checkResult("Address", "city:Big, street:long")
+                    .checkResult("State and City", "Haryana Karnal");
+        });
 
     }
 
