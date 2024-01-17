@@ -19,7 +19,8 @@ public class TestBases {
         Configuration.browserSize = System.getProperty("browserSize");
         Configuration.pageLoadStrategy = "eager";
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.remote = System.getProperty("remoteUrl");
+        Configuration.remote = "https://" + System.getProperty("user")
+                + "@" + System.getProperty("remoteUrl") + "/wd/hub";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
