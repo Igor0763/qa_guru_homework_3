@@ -13,7 +13,7 @@ public class TestBases {
     static void beforeAll() {
 
         String browserSize = System.getProperty("browser");
-        String remote = System.getProperty("remote");
+        String remoteUrl = System.getProperty("remoteUrl");
 
 
  //       Configuration.browserSize = "1920x1080";
