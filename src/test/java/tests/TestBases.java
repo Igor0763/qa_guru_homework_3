@@ -12,10 +12,9 @@ public class TestBases {
     @BeforeAll
     static void beforeAll() {
 
-/*        String browserSize = System.getProperty("browser");
-        String remoteUrl = System.getProperty("\"https://user1:1234@selenoid.autotests.cloud/wd/hub\";");*/
 
-
+        Configuration.browser = System.getProperty("browser");
+        Configuration.browserVersion = System.getProperty("browserVersion");
         Configuration.browserSize = System.getProperty("browserSize");
         Configuration.pageLoadStrategy = "eager";
         Configuration.baseUrl = "https://demoqa.com";
