@@ -13,12 +13,13 @@ public class TestBases {
     static void beforeAll() {
 
         String browserSize = System.getProperty("browser");
-        String baseUrl = System.getProperty("baseUrl");
+        String remote = System.getProperty("remote");
+
 
  //       Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
- //       Configuration.baseUrl = "https://demoqa.com";
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.baseUrl = "https://demoqa.com";
+ //       Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
