@@ -12,8 +12,8 @@ public class TestBases {
     @BeforeAll
     static void beforeAll() {
 
-        String browserSize = System.getProperty("browser");
-        String remoteUrl = System.getProperty("remoteUrl");
+/*        String browserSize = System.getProperty("browser");
+        String remoteUrl = System.getProperty("\"https://user1:1234@selenoid.autotests.cloud/wd/hub\";");*/
 
 
         Configuration.browserSize = System.getProperty("browserSize");
