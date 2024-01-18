@@ -1,7 +1,9 @@
 HELP.md
 build/
+notifications/
 !**/src/main/**
 !**/src/test/**
+
 
 ### IntelliJ IDEA ###
 .idea
@@ -17,4 +19,4 @@ settings.gradle
 
 ### Logs ###
 *.log
-credentials.txt
+
