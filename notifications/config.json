@@ -2,16 +2,16 @@
   "base": {
     "logo": "",
     "project": "",
-    "environment": "",
+    "environment": "dev",
     "comment": "",
     "reportLink": "",
     "language": "ru",
     "allureFolder": "",
-    "enableChart": false
+    "enableChart": true
   },
   "telegram": {
-    "token": "",
-    "chat": "",
+    "token": "5830459387:AAE6F2Glq_dbCe_NvJNpkSGcKoCyz6I9X6o",
+    "chat": "-1001667452964",
     "replyTo": ""
   }
 }
